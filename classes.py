@@ -12,7 +12,6 @@ class Television:
         """
         Constructor to create initial state of Television object.
         """
-
         self.__channel = Television.MIN_CHANNEL
         self.__volume = Television.MIN_VOLUME
         self.__status = False
