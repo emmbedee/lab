@@ -27,49 +27,57 @@ class Television:
         else:
             self.__status = False
 
-    def channel_up(self):
+    def channel_up(self) -> bool:
         """
         Method to set INCREMENT channel of Television object.
-        :rtype: None
+        :return FALSE if the self.__status is false.
         """
         if self.__status:
             if self.__channel < Television.MAX_CHANNEL:
                 self.__channel += 1
             else:
                 self.__channel = Television.MIN_CHANNEL
+        else:
+            return self.__status
 
-    def channel_down(self) -> None:
+    def channel_down(self) -> bool:
         """
         Method to set DECREMENT channel of Television object.
-        :rtype: None
+        :return FALSE if the self.__status is false.
         """
         if self.__status:
             if self.__channel > Television.MIN_CHANNEL:
                 self.__channel -= 1
             else:
                 self.__channel = Television.MAX_CHANNEL
+        else:
+            return self.__status
 
-    def volume_up(self) -> None:
+    def volume_up(self) -> bool:
         """
         Method to set INCREMENT volume of Television object.
-        :rtype: None
+        :return FALSE if the self.__status is false.
         """
         if self.__status:
             if self.__volume < Television.MAX_VOLUME:
                 self.__volume += 1
             else:
                 self.__volume = Television.MAX_VOLUME
+        else:
+            return self.__status
 
-    def volume_down(self) -> None:
+    def volume_down(self) -> bool:
         """
         Method to set DECREMENT channel of Television object.
-        :rtype: None
+        :return FALSE if the self.__status is false.
         """
         if self.__status:
             if self.__volume > Television.MIN_VOLUME:
                 self.__volume -= 1
             else:
                 self.__volume = Television.MIN_VOLUME
+        else:
+            return self.__status
 
     def __str__(self) -> str:
         """

@@ -32,10 +32,10 @@ class Test:
 
         # Test channel & volume attribute access when POWER = FALSE.
         assert 'TV Status: Is on = False' in self.tv1.__str__()
-        assert self.tv1.channel_up() is None
-        assert self.tv1.volume_up() is None
-        assert self.tv1.channel_down() is None
-        assert self.tv1.volume_down() is None
+        assert self.tv1.channel_up() is False
+        assert self.tv1.volume_up() is False
+        assert self.tv1.channel_down() is False
+        assert self.tv1.volume_down() is False
 
         # Test channel looping & volume min/max attributes.
         self.tv1.power()
