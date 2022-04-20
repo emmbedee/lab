@@ -67,5 +67,9 @@ class Television:
             else:
                 self.__volume = Television.MIN_VOLUME
 
-    def __str__(self):
+    def __str__(self) -> str:
+        """
+        __str__ method to return all attributes of a Television object.
+        :return  A string which gets each attribute so that it may be easily accessed.
+        """
         return f'TV Status: Is on = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}'
