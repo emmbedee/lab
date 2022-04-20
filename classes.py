@@ -2,14 +2,13 @@ class Television:
     """
     A class representing a Television object.
     """
-
     MIN_CHANNEL = 0  # Minimum TV channel
     MAX_CHANNEL = 3  # Maximum TV channel
 
     MIN_VOLUME = 0  # Minimum TV volume
     MAX_VOLUME = 2  # Maximum TV volume
 
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Constructor to create initial state of Television object.
         """
@@ -18,7 +17,7 @@ class Television:
         self.__volume = Television.MIN_VOLUME
         self.__status = False
 
-    def power(self):
+    def power(self) -> None:
         """
         Method to access and set POWER STATE of Television object.
         """
@@ -27,7 +26,7 @@ class Television:
         else:
             self.__status = False
 
-    def channel_up(self):
+    def channel_up(self) -> None:
         """
         Method to set INCREMENT channel of Television object.
         """
@@ -37,7 +36,7 @@ class Television:
             else:
                 self.__channel = Television.MIN_CHANNEL
 
-    def channel_down(self):
+    def channel_down(self) -> None:
         """
         Method to set DECREMENT channel of Television object.
         """
@@ -47,7 +46,7 @@ class Television:
             else:
                 self.__channel = Television.MAX_CHANNEL
 
-    def volume_up(self):
+    def volume_up(self) -> None:
         """
         Method to set INCREMENT volume of Television object.
         """
@@ -57,7 +56,7 @@ class Television:
             else:
                 self.__volume = Television.MAX_VOLUME
 
-    def volume_down(self):
+    def volume_down(self) -> None:
         """
         Method to set DECREMENT channel of Television object.
         """
