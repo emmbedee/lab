@@ -13,9 +13,9 @@ class Television:
         Constructor to create initial state of Television object.
         :rtype: None
         """
-        self.__channel = Television.MIN_CHANNEL
-        self.__volume = Television.MIN_VOLUME
-        self.__status = False
+        self.__channel: int = Television.MIN_CHANNEL
+        self.__volume: int = Television.MIN_VOLUME
+        self.__status: bool = False
 
     def power(self) -> None:
         """
@@ -82,6 +82,6 @@ class Television:
     def __str__(self) -> str:
         """
         __str__ method to return all attributes of a Television object.
-        :return  A string which gets each attribute so that it may be easily accessed.
+        :return  A string which gets each attribute so that it may be easily readable/accessed.
         """
         return f'TV Status: Is on = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}'
