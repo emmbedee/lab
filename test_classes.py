@@ -20,6 +20,8 @@ class Test:
         assert 'TV Status: Is on = False' in self.tv1.__str__()
         self.tv1.power()
         assert 'TV Status: Is on = True' in self.tv1.__str__()
+        self.tv1.power()
+        assert 'TV Status: Is on = False' in self.tv1.__str__()
 
     def test_channel_up(self):
         # Check access when POWER = FALSE.
@@ -84,3 +86,7 @@ class Test:
 
     def test_string(self):
         assert self.tv1.__str__() == 'TV Status: Is on = False, Channel = 0, Volume = 0'
+        self.tv1.power()
+        self.tv1.volume_up()
+        self.tv1.channel_up()
+        assert self.tv1.__str__() == 'TV Status: Is on = True, Channel = 1, Volume = 1'
